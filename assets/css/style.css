@@ -1,0 +1,302 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/cork-wallet.png");
+}
+
+    .content {
+    flex: 1 0 auto;
+} 
+
+/*header style*/
+
+header {
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.header-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name   {
+    color: white;
+    background: #55aaa4;
+    Height: 80px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+nav {
+    padding: 20px;
+}
+
+nav a {
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.border-right {
+    border-right: 1px solid #eee;
+}
+
+ /*Main Content Area*/
+
+.content-wrapper    {
+    max-width: 960px;
+    margin: 120px auto 60px auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid BLUE;
+}
+
+/*Main Section*/
+
+.content-main-section {
+    max-width: 650px;
+    background: white;
+    padding: 25px 20px;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+.about-me {
+    padding-bottom: 20px;
+}
+
+.content-main-section p {
+    line-height: 2;
+    text-indent: 25px;
+}
+
+.section    {
+    padding-top: 10px;
+}
+
+/*form*/
+
+.input {
+    width: 100%;
+    margin: 5px auto;
+    font-size: 1em;
+    color: black;
+}
+
+.label {
+    margin: 20px 0px;
+
+}
+
+.submit {
+    display:inline-block;
+    background-color: #55aaa4;
+    color: white;
+    padding:10px 30px;
+    margin: 10px auto;
+    text-decoration: none;
+}
+
+.msg {
+    min-height: 120px;
+    min-width: 600px;
+    max-width: 600px;
+    font-size: 1em;
+    color: black;
+}
+
+
+/*connect with me*/
+
+.connect    {
+    min-width: 270px;
+    height: 200px;
+    margin: 10px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.connect-with-me {
+    margin-top: 25px
+}
+
+.hr-connect {
+    width: 75%;
+    border-top: .25px solid #cacdcd;
+    margin: 0 auto;
+}
+
+.icons-connect {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+/*footer style*/
+
+.footer {
+    background: #666666;
+    height: 80px;
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: .75em;
+    padding-top: 30px;
+    color: white;
+}
+
+/*line style*/
+
+.hr-thick { 
+   border-top: 2px solid #cacdcd;
+   margin: 0 auto;
+}
+
+.hr-footer {
+    border: 5px solid #5daaa3;
+    margin: 0 auto;
+}
+
+
+/*font*/
+
+p, nav a, .label {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: grey;
+}
+
+
+h1, h2, h3  {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    color: #55aaa4;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 { 
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+/*portfolio style*/
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.portfolio-container {
+    position: relative;
+    margin: 20px 0px;
+}
+
+.app-title {
+    background-color: #55aaa4;
+    color: white;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px 0px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+/*images*/
+
+img {
+    display: block;
+}
+
+.resize-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.profile-picture    {
+    float: left;
+    width: 200px;
+    height: auto;
+    padding: 10px 15px 0px 0px;
+    display: block;
+}
+
+/*Responsive*/
+
+/*Desktop Layout*/
+@media only screen and (max-width: 980px) {
+    
+}
+
+/*Tablet Layout*/
+@media only screen and (max-width: 768px) {
+    
+}
+
+/*Phone layout*/
+@media only screen and (max-width: 640px) {
+    .header {
+        position: static;
+        height: 100px;
+    }
+    .header-name {
+        width: 100%;
+    }
+
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        margin: 160px auto 60px auto;
+    }
+
+    .profile-picture    {
+        float: none;
+        max-width: 200px;
+        padding: 0px auto;
+        height: auto;
+
+}
+  
