@@ -31,6 +31,7 @@ header {
 .header-wrapper {
     max-width: 960px;
     margin: 0 auto;
+    padding-left: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +65,7 @@ nav a {
 .content-wrapper    {
     max-width: 960px;
     margin: 120px auto 60px auto;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     border: 1px solid BLUE;
@@ -73,9 +75,10 @@ nav a {
 
 .content-main-section {
     max-width: 650px;
+    width: 100%;
     background: white;
     padding: 25px 20px;
-    margin: 10px;
+    margin: 10px; 
     border: 1px solid red;
 }
 
@@ -96,14 +99,15 @@ nav a {
 
 .input {
     width: 100%;
-    margin: 5px auto;
     font-size: 1em;
     color: black;
 }
 
 .label {
-    margin: 20px 0px;
-
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid black;
 }
 
 .submit {
@@ -117,8 +121,8 @@ nav a {
 
 .msg {
     min-height: 120px;
-    min-width: 600px;
-    max-width: 600px;
+    width: 100%;
+    max-width: 640px;
     font-size: 1em;
     color: black;
 }
@@ -127,18 +131,21 @@ nav a {
 /*connect with me*/
 
 .connect    {
-    min-width: 270px;
+    width: 270px;
+    min-width: ;
     height: 200px;
-    margin: 10px;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 10px;
+    border: 1px solid green;
 }
 
 .connect-with-me {
-    margin-top: 25px
+    margin-top: 25px;
+    
 }
 
 .hr-connect {
@@ -229,6 +236,8 @@ h3 {
 .portfolio-container {
     position: relative;
     margin: 20px 0px;
+    width: 275px;
+    height: 200px;
 }
 
 .app-title {
@@ -261,20 +270,39 @@ img {
     display: block;
 }
 
+.portfolio-img {
+    width: 275px;
+}
+
 /*Responsive*/
 
 /*Desktop Layout*/
-@media only screen and (max-width: 980px) {
-    
+@media only screen and (max-width: 980px) and (min-width: 768px) {
+
 }
 
 /*Tablet Layout*/
 @media only screen and (max-width: 768px) {
     
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-main-section {
+        width: 100%;
+    }
+
+    .connect {
+        width: 100%;
+        max-width: 650px;
+    }
 }
 
 /*Phone layout*/
 @media only screen and (max-width: 640px) {
+    
+    
     .header {
         position: static;
         height: 100px;
@@ -285,18 +313,28 @@ img {
 
     .header-wrapper {
         flex-direction: column;
+        padding: 0;
     }
 
     .content-wrapper {
         flex-direction: column;
         margin: 160px auto 60px auto;
     }
-
+    /*centers profile picture*/
     .profile-picture    {
         float: none;
-        max-width: 200px;
-        padding: 0px auto;
+        width: 300px;
+        margin: 10px auto;
         height: auto;
-
+    }
+    /*Aligns about me header center*/
+    .about-me {
+        text-align: center;
+    }
+    /*aligns portfolio pictures center*/
+    .portfolio-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
   
