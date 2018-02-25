@@ -277,6 +277,24 @@ img {
 
 }
 
+/*Portfolio Page @ 850px*/
+
+@media only screen and (max-width: 850px) {
+    .portfolio-wrapper {
+        flex-direction: column;
+    }
+
+    .portfolio-container {
+        height:auto;
+        width:340px;
+    }
+
+    .portfolio-img {
+        width: 340px;
+    }
+
+}
+
 /*Tablet Layout*/
 @media only screen and (max-width: 768px) {
     
@@ -292,19 +310,6 @@ img {
     .connect {
         max-width: 650px;
         width: 100%;
-    }
-
-    .portfolio-wrapper {
-        flex-direction: column;
-    }
-
-    .portfolio-container {
-        height:auto;
-        width:340px;
-    }
-
-    .portfolio-img {
-        width: 340px;
     }
 }
 
