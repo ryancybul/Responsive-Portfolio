@@ -8,7 +8,7 @@ html {
   }
 
 body {
-    background-image: url("../images/cork-wallet.png");
+    background-image: url("../images/cork-wallet.png")!important;
     display: flex;
     flex-direction: column;
     height: 100%;
