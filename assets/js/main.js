@@ -38,10 +38,8 @@ function submitForm(e){
     },3000);
 
     //Clear form
-    document.getElementById('contactForm').requestFullscreen();
+    document.getElementById('contactForm').reset();
 }
-
-
 
 //Function to get form values
 function getInputVal(id){
