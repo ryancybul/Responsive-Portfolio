@@ -36,22 +36,32 @@
             </div>
             <hr class="hr-thick">
             <section>
-                    <form>
+                    <form id="contactForm">
                         <div class="label">
                             <label for="name">Name:</label>
-                            <input class="input" type="text" id="name" name="user_name" placeholder="ex: Steve Brule">
+                            <input class="input" type="text" id="name" required>
+                        </div>
+                        <div class="label">
+                            <label for="name">Company:</label>
+                            <input class="input" type="text" id="company">
                         </div>
                         <div class="label">
                             <label for="mail">E-mail:</label>
-                            <input class="input" type="email" id="mail" name="user_mail" placeholder="example@gmail.com">
+                            <!-- @TODO Email Validation-->
+                            <input class="email" type="text" id="email" required>
+                        </div>
+                        <div class="label">
+                            <label for="mail">Phone Number:</label>
+                            <input class="input" type="text" id="phone">
                         </div>
                         <div class="label">
                             <label for="msg">Message:</label>
-                            <textarea class="input msg" id="msg" name="user_message"></textarea>
+                            <textarea class="input msg" id="message" required></textarea>
                         </div>
-                        <a href="" class="submit">Submit</a>
+                        <button type='submit' class="submit">Submit</button>
                     </form> 
             </section>
+            <div class='alert'>Your message has been sent!</div>
         </div>
 
         <!--Connect with me -->
@@ -95,6 +105,10 @@
         <hr class="hr-footer">    
         <p class="footer-text">@Copyright 2018 Ryan Cybul</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

@@ -311,6 +311,16 @@ img {
     width: 275px;
 }
 
+/*Alerts*/
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #55aaa4;
+    color: #fff;
+    margin-bottom: 10px;
+    
+}
+
 /*Responsive*/
 
 /*Desktop Layout*/
